@@ -5,6 +5,13 @@ document.write("I am here");
 //console
 console.log("it worked!");
 
+let animals = ["cat", "rabbit", "bird", "fish", "chicken"];
+let randomIndex = Math.floor(Math.random() * animals.length);
+let randomAnimal = animals[randomIndex];
+let userNumber = prompt("what position do you think " + randomAnimal + " is?");
+let response = userNumber == randomIndex ? "you are right!" : "Wrong! the correct value is " + randomIndex ;
+alert(response);
+/*
 let task = ["work", "take trash out","write JS", "take breakfast", "go home"];
 let progress = ["done", "in progress", "to do"];
 
@@ -14,8 +21,7 @@ console.log("today you will " + task[(task.length - 1)] + "status is " + progres
 
 task[task.length] = "eat banana";
 console.log(task);
-// testing password cache when pushing code
-/*
+
 let t8= "hello world\'s"
 let t9 = "my fraction is 5/8"
 
