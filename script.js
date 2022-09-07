@@ -1,5 +1,11 @@
 
-document.write("I am here");
+let output = document.getElementById("welcome");
+let val = document.getElementById("val");
+val.value = output.innerHTML;
+
+console.log("value is" + val);
+
+/*
 //objects and loops
 let car = {color:"red", make:"ford", doors:5, year:2020};
 for (let property in car ){
@@ -57,3 +63,4 @@ let firstNumber = prompt("first number?");
 let secondNumber = prompt("second number?");
 let result = Number(firstNumber) + Number(secondNumber);
 alert("your result is " + result);
+*/
