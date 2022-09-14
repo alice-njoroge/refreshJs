@@ -1,9 +1,10 @@
 
-let output = document.getElementById("welcome");
-let val = document.getElementById("val");
-val.value = output.innerHTML;
+//Ternary operators
+let users = ["Alice", "Steve", "Jacinta","Francis"];
+let index = users.indexOf(prompt("Suggest a name please"));
+let output = document.getElementById("output");
+output.innerHTML = index === -1 ? "Sorry the user is non existent" : "Hello "+ users[index];
 
-console.log("value is" + val);
 
 /*
 //objects and loops
