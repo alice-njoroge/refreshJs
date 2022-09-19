@@ -1,9 +1,27 @@
 
-//Ternary operators
-let users = ["Alice", "Steve", "Jacinta","Francis"];
-let index = users.indexOf(prompt("Suggest a name please"));
 let output = document.getElementById("output");
-output.innerHTML = index === -1 ? "Sorry the user is non existent" : "Hello "+ users[index];
+output.innerHTML = "I love this"
+
+//else
+
+let myTime = 13;
+if(myTime < 12 ){
+    output.innerHTML= "Morning";
+}else {
+    output.innerHTML = "afternoon"
+}
+
+
+//toss a coin
+let input = prompt("heads or tail");
+let result = input === "heads" ? 1: 0;
+let randValue = Math.floor(Math.random()*2);
+console.log(randValue);
+if (result === randValue){
+    output.innerHTML= "correct"
+}else{
+    output.innerHTML = "Wrong!"
+}
 
 
 /*
