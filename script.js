@@ -11,7 +11,7 @@ if(myTime < 12 ){
     output.innerHTML = "afternoon"
 }
 
-
+/*
 //toss a coin
 let input = prompt("heads or tail");
 let result = input === "heads" ? 1: 0;
@@ -21,6 +21,38 @@ if (result === randValue){
     output.innerHTML= "correct"
 }else{
     output.innerHTML = "Wrong!"
+}
+
+ */
+
+//rock paper scissors game
+let player = prompt("Do you choose Rock, Paper or Scissors");
+let ps = player.charAt(0).toLocaleLowerCase();
+console.log("player", player, ps);
+
+let computer = Math.floor(Math.random()*3);
+let html;
+if(computer === 1){
+    html = "Rock"
+}else if(computer === 2){
+    html = "Scissors"
+}else{
+    html = "Paper"
+}
+let cs = html.charAt(0).toLocaleLowerCase();
+console.log("computer", html, cs);
+
+if ((ps === 'r' && cs === 's') || (ps === 'p' && cs === 'r') || (ps === 's' && cs === 'p')){
+    console.log("you win");
+    alert("You win against the computer!!")
+}else if ((ps === 's' && cs === 'r') || (ps === 'r' && cs === 'p') || (ps === 'p' && cs === 's')) {
+    console.log("you lose!");
+    alert("you lost to the computer!");
+}else if (cs === ps){
+    alert("this is a tie :)")
+}
+else{
+    alert("keep playing");
 }
 
 
