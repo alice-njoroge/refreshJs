@@ -1,7 +1,20 @@
-//do while - print even numbers between 0 and 30
-let output = document.getElementById("output");
-let x = 0;
-do {
-    x++;
-    output.innerHTML += x + "x count <br>";
-} while (x <= 10);
+//magic switch ball
+let output = document.getElementById('output');
+let question = prompt("what is your question?");
+
+let response = Math.floor(Math.random()*6);
+
+switch (response){
+    case 1:
+        output.innerHTML = "I think so";
+        break;
+    case 2 :
+        output.innerHTML = "yes";
+        break;
+    case 3:
+        output.innerHTML = "no";
+        break;
+    default:
+        output.innerHTML = "I dont know";
+}
+
