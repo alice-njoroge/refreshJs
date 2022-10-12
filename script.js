@@ -1,6 +1,6 @@
 // for in
-let userNames = ["larry", "mike"];
+let userNames = ["larry", "mike", "john", "frank"];
 let output = document.getElementById('output');
-for ( let v of userNames) {
-    output.innerHTML += v + "<br>";
+for ( let v in userNames) {
+    output.innerHTML += userNames[v] + "<br>";
 }
