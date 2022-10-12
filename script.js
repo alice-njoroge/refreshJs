@@ -1,20 +1,20 @@
-//magic switch ball
+//nested loops -- building a table
 let output = document.getElementById('output');
-let question = prompt("what is your question?");
-
-let response = Math.floor(Math.random()*6);
-
-switch (response){
-    case 1:
-        output.innerHTML = "I think so";
-        break;
-    case 2 :
-        output.innerHTML = "yes";
-        break;
-    case 3:
-        output.innerHTML = "no";
-        break;
-    default:
-        output.innerHTML = "I dont know";
+let sum = 0; // initialization should be done outside the loop so you dont reset the values
+//
+for (let i = 0; i < 100; i++) {
+    if (i % 5 === 0) {
+        sum += i;
+        output.innerHTML += "value is" + i + "sum= " + sum + "<br>";
+    }
 }
 
+//fast way of doing the same
+let summation = 0
+for (let i = 0; i < 100; i++) {
+    if (i % 5 !== 0) {
+        continue;
+    }
+    summation += i;
+    output.innerHTML += summation + "<br>";
+}
