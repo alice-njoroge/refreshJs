@@ -1,10 +1,10 @@
 // function variables
 let output = document.getElementById("output");
+let a = "hello ";
+let b = "world";
+
+myFunction( a, b);
 
 function myFunction() {
-   let a = "hello ";
-   let b = "world";
     return  output.innerHTML = a + b;
 }
-
-myFunction();
