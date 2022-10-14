@@ -8,9 +8,28 @@
     <title>Document</title>
 </head>
 <body>
-<div id="output"></div>
+<div id="output">
+    <input type="button" value="Click Me" onclick="myFunc()">
+</div>
 
-<script src="script.js"> </script>
+<script>
+    let answers = ["Larry", "John", "Mike"];
+    let output = document.getElementById('output');
+    let message;
 
+    function myFunc() {
+        let question = prompt("what is your name?");
+        let response = answers.indexOf(question);
+        if (response === -1) {
+            message = "sorry you are not a registered member";
+            output.innerHTML = message;
+        } else {
+            message = "Welcome " + answers[response];
+            output.innerHTML = message
+        }
+        return message;
+
+    }
+</script>
 </body>
 </html>
