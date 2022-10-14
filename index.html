@@ -22,11 +22,10 @@
         let response = answers.indexOf(question);
         if (response === -1) {
             message = "sorry you are not a registered member";
-            output.innerHTML = message;
         } else {
             message = "Welcome " + answers[response];
-            output.innerHTML = message
         }
+        output.innerHTML = message;
         return message;
 
     }
