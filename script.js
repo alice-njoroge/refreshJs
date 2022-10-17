@@ -1,7 +1,12 @@
-//backward loop
+//guessing game
 
-let users = ["larry", "mike", "john"];
+let adjectives = ["awesome", "amazing", "wonderful"];
+let output = document.getElementById("output");
 
-for (let i= users.length-1; i>= 0; i--){
-    console.log(users[i])
+function guessAdj(){
+    let i = Math.floor(Math.random() * (adjectives.length) );
+    console.log(i)
+    let user = prompt("what is your name?");
+    output.innerHTML = adjectives[i] + " " + user;
 }
+guessAdj();
