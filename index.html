@@ -10,7 +10,21 @@
 <body>
 <div id="output"></div>
 
-<script src="script.js"> </script>
+<script>
+    let output = document.getElementById("output");
+
+    //get the words from the user
+    let word1 = prompt("what is the first word?");
+    let word2 = prompt("what is the second word?");
+
+    //sort the letters in the words alphabetically
+    let arr1 = word1.split("").sort().join();
+    let arr2 = word2.split("").sort().join();
+
+    //compare the arrays
+    arr1 === arr2 ? (output.innerHTML = "Yes"): (output.innerHTML = "No");
+
+</script>
 
 </body>
 </html>
