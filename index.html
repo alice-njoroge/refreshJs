@@ -9,8 +9,58 @@
 </head>
 <body>
 <div id="output"></div>
+<input type="text" id="code1">
+<input type="text" id="code2">
+<input type="text" id="code3">
 
-<script src="script.js"> </script>
+<input type="button" id="button1" value="Crack" onclick="myCrack()">
+
+<script>
+
+    let c1 = document.getElementById("code1");
+    let c2 = document.getElementById("code2");
+    let c3 = document.getElementById("code3");
+    let output = document.getElementById("output");
+
+    let cCode = [];
+    var count = 0;
+
+    for (let x = 0; x < 3; x++) {
+        cCode.push(Math.floor(Math.random() * 9));
+    }
+    output.innerHTML = cCode;
+
+    function myCrack() {
+        count = 0;
+        let guess = [c1.value, c2.value, c3.value];
+        console.log(guess);
+        for (let x = 0; x < cCode.length; x++) {
+            output.innerHTML += checkNum(guess[x], cCode[x]);
+        }
+        if (count === 3) {
+            output.innerHTML += "You guessed it <br>";
+        } else {
+            output.innerHTML += "<br>";
+        }
+
+    }
+
+    function checkNum(a, b) {
+        if (a > b) {
+            return "L";
+        }
+        if (a < b) {
+            return "H";
+        }
+        if (a == b) {
+            count++;
+            return a;
+        }
+
+    }
+
+
+</script>
 
 </body>
 </html>
