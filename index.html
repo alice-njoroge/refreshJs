@@ -9,11 +9,21 @@
 </head>
 <body>
 <div id="output"></div>
+<input type="button" value="Start Game" onclick="start()">
 
 <script>
-    const xmas95 = new Date('December 25, 1995 23:15:30');
-    const weekday = xmas95.getDay();
-    console.log(weekday);
+    let output = document.getElementById("output");
+    let secWord = ["js", "php"];
+
+    function start() {
+        let givenWord = prompt("What is your word?");
+        compare(secWord, givenWord);
+    }
+
+    function compare(secret, given) {
+        secret.includes(given) ? output.innerHTML = "correct" : start();
+    }
+
 </script>
 
 </body>
